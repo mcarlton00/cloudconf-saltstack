@@ -1,4 +1,4 @@
-{% set role = salt['grains.get']('ec2_roles', '') %}
+{% set role = salt['grains.get']('ec2_roles', '')[0] %}
 
 base:
   '*':

@@ -1,8 +1,7 @@
-{% set role = salt['grains.get']('ec2_roles', '') %}
-
 base:
-  '*':
-    {{ role }}:
+  'ec2_roles:plone':
       - match: grain
-      - {{ role }}
-
+      - plone
+  'ec2_roles:static':
+      - match: grain
+      - static
